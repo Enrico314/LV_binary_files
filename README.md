@@ -1,43 +1,37 @@
 # LV_binary_files
 
-Module to read/write LabVIEW binary files including flattened data and TDMS (based on python3.6+numpy).
+![GPLv3-only License](https://img.shields.io/badge/License-GPLv3--only_License-lightgray)  ![Planning](https://img.shields.io/badge/Status-Planning-blue)
 
-## Getting Started
+## Table of Contents
 
-Two classes are defined, one for each type of file:
+- [Short hatch explanation](#short-hatch-explanation)
+- [License](#license)
 
-* LV_fd() works with flattened data. It is a building block for a higher level class that reads/writes this kind of binary file.
+## Short hatch explanation
 
-* LV_TDMS() works with Technical Data Management Streaming (TDMS).
+**Please exchange this short explanation with your own documentation.**
 
-The former is more advanced in terms of development, although not all types of flattened data are implemented, the latter is highly incomplete and still in an experimental stage.
+Unfortunately there are some issues with hatch on GSI windows machines. Therefore, it has to be used under WSL (Windows Subsystem for Linux).
 
-### Prerequisites
+0. Search for `WSL` or `Ubuntu` in the GSI software center and install the found `Ubuntu 20.04`.
 
-Naturally, the prerequisites for this module are the following:
+*All the following commands ar to be executed in the WSL environment.*
 
-* Python 3 (3.6 and above)
+1. Install hatch with `pip install hatch`, where the assumption is made, that python is installed already.
+2. Modify the `.bashrc` to add `.local` to the PATH variable. Afterwards restart the shell for the changes to function.
+3. You are done and should be able to use hatch. Try `hatch --version`.
 
-* Numpy
+The following commands are supported by this project template:
+- `hatch run test:cov`: This runs the tests for the project and also reports on the test coverage.
+- `hatch run lint:all`: This runs the linter telling where the code style can be / should be improved.
+- `hatch run lint:fix`: This applies any automatic fixes, which are possible to do for the code.
+- `hatch build`: Build the package into a .wheel and .tar.gz file.
+- `hatch run docs:generate` and `hatch run docs:build`: These commands run one after the other build the documentation for the project from the docstrings in the code.
+- `hatch run docs:serve`: This serves the documentation on a local webserver (http://localhost:8000).
 
-### Installing
+All these commands are also included in the `run.sh` file, which executes the hatch commands in order to perform the tests, linting, building and documentation generation.
 
-There is not really an install procedure, you just download the module and make it available to `import` in your python scripts somewhere in you folder tree.
-
-The kind of usage intended for LV_fd is the following:
-
-```python
-from LVBF import LV_fd
-
-reader = LV_fd(endian='>', encoding='cp1252')
-with open('some_file.bin', mode='rb') as reader.fobj:
-    value = reader.read_numeric()
-```
-
-## Contributing
-
-... TBD
 
 ## License
 
-This project is licensed under the BSD 3 clause License - see the [LICENSE.md](LICENSE.md) file for details.
+LV_binary_files is distributed under the terms of the [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html) license.
