@@ -1,14 +1,20 @@
 # LV_binary_files
 
+## This is a port to hatch and python 3.8 and needs to be fixed and checked
+
+# Old readme
+
+# LV_binary_files is distributed under the terms of the BSD-3-Clause license
+
 Module to read/write LabVIEW binary files including flattened data and TDMS (based on python3.6+numpy).
 
 ## Getting Started
 
 Two classes are defined, one for each type of file:
 
-* LV_fd() works with flattened data. It is a building block for a higher level class that reads/writes this kind of binary file.
+- LV_fd() works with flattened data. It is a building block for a higher level class that reads/writes this kind of binary file.
 
-* LV_TDMS() works with Technical Data Management Streaming (TDMS).
+- LV_TDMS() works with Technical Data Management Streaming (TDMS).
 
 The former is more advanced in terms of development, although not all types of flattened data are implemented, the latter is highly incomplete and still in an experimental stage.
 
@@ -16,9 +22,9 @@ The former is more advanced in terms of development, although not all types of f
 
 Naturally, the prerequisites for this module are the following:
 
-* Python 3 (3.6 and above)
+- Python 3 (3.6 and above)
 
-* Numpy
+- Numpy
 
 ### Installing
 
@@ -40,7 +46,7 @@ with open('some_file.bin', mode='rb') as reader.fobj:
     strings = reader.read_array(reader.read_string) # read an array of strings
     timestamp = reader.read_array(reader.read_timestamp, reader.LVtimestamp) # read an array of LVtimestamp
     eof = reader.EOD() # check for End-Of-Data
-    
+
     if not eof:
         raise EOFError('End-Of-Data not reached!')
 ```
