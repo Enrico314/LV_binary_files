@@ -1,6 +1,5 @@
 <!--- Add here generic links that can be used in every md doc -->
 [MIT]: https://spdx.org/licenses/MIT.html
-[GPL-3.0-only]: https://spdx.org/licenses/GPL-3.0-only.html
 [git]: https://git-scm.com/
 [black]: https://pypi.org/project/black/
 [pre-commit]: https://pre-commit.com/

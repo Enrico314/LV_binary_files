@@ -1,5 +1,5 @@
 # Copyright (c) 2025, GSI Helmholtzzentrum für Schwerionenforschung GmbH
-# LV_binary_files is distributed under the terms of the [GPL-3.0-only] https://spdx.org/licenses/GPL-3.0-only.html license.
+# LV_binary_files is distributed under the terms of the BSD-3-Clause
 
 import sys
 
@@ -10,8 +10,8 @@ else:
     from importlib_metadata import PackageNotFoundError, version
 
 try:
-    __version__ = version('LV_binary_files')
+    __version__ = version("LV_binary_files")
 except PackageNotFoundError:  # pragma: no cover
-    __version__ = 'unknown'
+    __version__ = "unknown"
 finally:
     del version, PackageNotFoundError
