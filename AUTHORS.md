@@ -1,3 +1,4 @@
 # Contributors
 
-* [ Enrico Pierobon ] ( e.pierobon@gsi.de )
+- [Paulo Candeias]
+- [ Enrico Pierobon ] ( <en.pierobon@gmail.com> )

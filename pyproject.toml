@@ -26,9 +26,7 @@ classifiers = [ #User: Modify according to your needs!
 # direct dependencies of this package, installed when users `pip install LV_binary_files` later.
 dependencies = [ #User: Modify according to your needs!
     "numpy",
-    "platform"
     # as example use:
-    # "pygcrnamehandling @ git+https://<user>:<token>@git.gsi.de/gcr-simulator1/pygcrnamehandling.git"
     # to import from a project from a git repository
 ]
 dynamic = ["version"]
@@ -126,7 +124,7 @@ exclude_lines = [
 ]
 
 [tool.ruff]
-target-version = "py312" # ToDo: Modify according to your needs!
+target-version = "py38" # ToDo: Modify according to your needs!
 line-length = 120
 indent-width = 4
 include = [
@@ -273,11 +271,6 @@ SOURCE_DATE_EPOCH = "1580601600"
 PYTHONUNBUFFERED = "1"
 MKDOCS_CONFIG = "mkdocs.yml"
 [tool.hatch.envs.docs.scripts]
-generate = ["jupyter nbconvert --execute --to notebook --inplace notebooks/JN_under_test.ipynb"]
-build = "mkdocs build --config-file {env:MKDOCS_CONFIG} --clean --strict {args}"
-serve = "mkdocs serve --config-file {env:MKDOCS_CONFIG} --dev-addr localhost:8000 {args}"
-ci-build = "mike deploy --config-file {env:MKDOCS_CONFIG} --update-aliases {args}"
-# --ignore-url=None since the SUMMARY.md file leaves a <toc>None</toc> in sitemap.xml
 validate = "linkchecker --config .linkcheckerrc --ignore-url=/reference --ignore-url=None site"
 # https://github.com/linkchecker/linkchecker/issues/678
 build-check = [

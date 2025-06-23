@@ -16,6 +16,7 @@ flattened data are implemented, the latter is still in an experimental stage.
 """
 
 # Developed for Python 3.6.5
+# ported to python 3.8
 
 # Python standard library
 from time import time

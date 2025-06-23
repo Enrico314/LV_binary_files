@@ -1,4 +1,3 @@
-# Copyright (c) 2025, GSI Helmholtzzentrum für Schwerionenforschung GmbH
 # LV_binary_files is distributed under the terms of the BSD-3-Clause
 
 import sys
